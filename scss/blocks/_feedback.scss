@@ -1,0 +1,199 @@
+.feedback {
+  .feedback__container {
+    margin: 150px auto;
+    max-width: 852px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13.5%;
+
+    @media (max-width: 800px) {
+      margin: 60px auto 80px;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .feedback__circle-wrapper-outer {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 800px) {
+        max-width: 73%;      
+      }
+
+      .feedback__circle-wrapper {
+        position: relative;
+        
+        aspect-ratio: 1 / 1;       
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        animation: round-circle 60s infinite linear;
+
+        @media (max-width: 800px) {
+          width: 70.67%;
+        }
+  
+        @keyframes round-circle {
+          from {
+            transform: rotateZ(0turn);
+          }
+        
+          to {
+            transform: rotateZ(1turn);
+          }
+        }
+        
+        @keyframes round-reverse {
+          from {
+            transform: rotateZ(0turn);
+          }
+        
+          to {
+            transform: rotateZ(-1turn);
+          }
+        }
+        
+        .feedback__circle {
+          position: absolute;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          border: 1px dashed #F6762C;
+          opacity: 0.7;
+          animation: round-reverse 60s infinite linear;
+        }
+        
+        .feedback___circle_outer {
+          width: 100%;
+        }
+  
+        .feedback___circle_inner {
+          width: 66.47%;
+        }
+  
+        .feedback__img-wrap {
+          position: absolute;
+          aspect-ratio: 1 / 1;
+          cursor: pointer;
+          animation: round-reverse 60s infinite linear;          
+  
+          .feedback__img {
+            width: 100%;
+            border-radius: 50%;
+            transition: transform .2s ease-out;
+  
+            &:is(:hover, :active) {
+              transform: scale(1.1);
+            }
+          }
+  
+          .feedback__img-center {
+            &:is(:hover, :active) {
+              transform: scale(1.05);
+            }
+          }
+          
+          .feedback__img_checked {
+            transform: scale(1.1);
+            outline: 1px solid rgb(246, 118, 44, 0.6);      
+            filter: drop-shadow(0 0 20px rgb(246, 118, 44, 0.6)) brightness(1.08);
+            transition: filter .2s ease-out;
+          }
+  
+          .feedback__img-center.feedback__img_checked {
+            transform: scale(1.05);
+          }
+        }
+
+        .feedback__img-wrap_center {
+          width: 31.27%;
+        }
+  
+        .feedback__img-wrap_first {
+          width: 24.9%;
+          inset-inline-start: -4.18%;
+          inset-block-start: 9.53%;
+        }
+  
+        .feedback__img-wrap_second {
+          width: 20.12%;
+          inset-inline-end: 9.92%;
+          inset-block-start: 0;
+        }
+  
+        .feedback__img-wrap_third {
+          width: 20.91%;
+          inset-inline-end: -1.8%;
+          inset-block-end: 9.94%;
+        }
+  
+        .feedback__img-wrap_fourth {
+          width: 21.51%;
+          inset-inline-start: 6.35%;
+          inset-block-end: 0;
+        }
+      }
+    }
+
+    .feedback__text-wrapper {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 800px) {
+        max-width: 100%;
+        margin-top: 44px;
+      }
+
+      .feedback__text {
+        width: 368px;
+        text-align: center;
+  
+        .feedback__blockquote {
+          position: relative;
+          margin: 0 0 27px;
+  
+          .feedback__quote {
+            margin: 0;         
+            text-align: center;
+            opacity: 0.7;
+          }
+  
+          &::before {
+            content: url(../images/icons/quote.svg);
+            position: relative;
+            bottom: 37px;
+  
+            @media (max-width: 800px) {
+              bottom: 29px;
+            }
+          }
+        }   
+  
+        .feedback__author {
+          font-size: 24px;
+          font-weight: 500;
+          margin-top: 0;
+          margin-bottom: 2px;
+        }
+  
+        .feedback__cite {
+          font-size: 12px;
+          font-weight: 500;
+          font-style: normal;
+          text-align: center;
+          text-transform: uppercase;
+          opacity: 0.7;
+        }
+      }
+    }
+  }   
+}

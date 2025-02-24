@@ -1,0 +1,22 @@
+.download-menu {
+  background-color: rgb(49, 47, 48);
+}
+.download-menu .download-menu__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 170px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.download-menu .download-menu__container .download-menu__title {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.download-menu .download-menu__container .btn {
+  margin-right: 20px;
+}
